@@ -1,11 +1,11 @@
 <template>
-	<article class="mt-3">
+	<article class="my-4">
 		<div class="container">
-			<div class="row">
-				<div class="col-5 text-center principal-news">
+			<div class="d-flex flex-wrap justify-content-center">
+				<div class="col-md-5 text-center principal-news">
 					<h2 class="p-1">Veja os últimos resultados do campeonato</h2>
 				</div>
-				<div class="col-5 offset-2 text-center principal-news">
+				<div class="col-md-5 offset-md-2 text-center principal-news">
 					<h2 class="p-1">Venha conhecer o centro de treinamentos da Hcode</h2>
 				</div>
 			</div>
