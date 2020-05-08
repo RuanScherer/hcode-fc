@@ -2,10 +2,10 @@
 	<article class="my-4">
 		<div class="container">
 			<div class="d-flex flex-wrap justify-content-center">
-				<div class="col-md-5 text-center principal-news">
+				<div class="col-md-5 text-center principal-news" id="first">
 					<h2 class="p-1">Veja os últimos resultados do campeonato</h2>
 				</div>
-				<div class="col-md-5 offset-md-2 text-center principal-news">
+				<div class="col-md-5 offset-md-2 text-center principal-news" id="second">
 					<h2 class="p-1">Venha conhecer o centro de treinamentos da Hcode</h2>
 				</div>
 			</div>
@@ -20,18 +20,15 @@
 </script>
 
 <style scoped>
-	.container .row {
-		height: 300px;
-	}
-	.container .row .col-5 {
+	.principal-news {
 		background-repeat: no-repeat;
 		background-size: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
-	.container .row .col-5:first-child {
+	#first {
 		background-image: url("../assets/football.jpg");
 	}
-	.container .row .col-5:nth-child(2) {
+	#second {
 		background-image: url("../assets/football2.jpg");
 	}
 	h2 {
