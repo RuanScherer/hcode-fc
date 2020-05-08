@@ -1,15 +1,20 @@
 <template>
 	<section>
-		<AppSectionBanner/>
+		<div>
+			<AppSectionBanner/>
+			<AppSectionNews/>
+		</div>
 	</section>
 </template>
 
 <script>
 	import AppSectionBanner from './AppSectionBanner'
+	import AppSectionNews from './AppSectionNews'
 	export default {
 		name: 'AppSection',
 		components: {
-			AppSectionBanner
+			AppSectionBanner,
+			AppSectionNews
 		}
 	}
 </script>

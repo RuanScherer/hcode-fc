@@ -1,0 +1,49 @@
+<template>
+	<div class="row mb-3">
+		<div class="col-3">
+			<img :src="require('../assets/' + this.img)" :alt="imgInfo">
+		</div>
+		<div class="col-9">
+			<h2 class="text-white">{{ newsTitle }}</h2>
+			<p>{{ newsContent | truncate(200) }}</p>
+			<span class="font-italic">{{ newsDate }}</span>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'AppSectionNewsIndividual',
+		props: {
+			img: {
+				type: String,
+				required: true,
+			},
+			imgInfo: {
+				type: String,
+				required: true
+			},
+			newsTitle: {
+				type: String,
+				required: true
+			},
+			newsContent: {
+				type: String,
+				required: true
+			},
+			newsDate: {
+				type: String,
+				required: true
+			}
+		}
+	}
+</script>
+
+<style scoped>
+	img	{
+		width: 100%;
+	}
+	h2 {
+		cursor: pointer
+	}
+</style>
