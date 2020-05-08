@@ -1,23 +1,38 @@
 <template>
-	<header class="bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<nav class="navbar navbar-expand">
-				<a href="#" class="link navbar-brand mr-auto">
-					<img 
-						src="./../assets/logo.svg" 
-						alt="Hcode Treinamentos"
-						class="img d-inline-block align-top"
-						id="logo">
-					Futebol Clube
-				</a>
-				<div class="links mr-2">
-					<a href="#" class="text-light btn mr-5">Início</a>
-					<a href="#" class="text-light btn mr-5">Times</a>
-					<a href="#" class="text-light btn mr-5">Classificações</a>
-				</div>
-			</nav>
+			<a href="#" class="navbar-brand mr-auto">
+				<img 
+					src="./../assets/logo.svg" 
+					alt="Hcode Treinamentos"
+					id="logo">
+			</a>
+			<button 
+				class="navbar-toggler" 
+				type="button" 
+				data-toggle="collapse" 
+				data-target="#nav-menu" 
+				aria-controls="nav-menu" 
+				aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="nav-menu">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Times</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Classificações</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</header>
+	</nav>
 </template>
 
 <script>
@@ -30,14 +45,6 @@
 	#logo {
 		width: 150px;
 		height: 100%;
-	}
-	.links {
-		display: inline-flex;
-	}
-	.link {
-		color: #D48E23;
-		font-size: 30px;
-		font-family: 'Rajdhani'
 	}
 	.links a:focus {
 		outline: none !important;
