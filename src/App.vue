@@ -1,20 +1,27 @@
 <template>
 	<div id="app">
 		<AppHeader/>
-		<AppSection/>
+		<section>
+			<div>
+				<AppSectionBanner/>
+				<AppSectionNews/>
+			</div>
+		</section>
 		<AppFooter/>
 	</div>
 </template>
 
 <script>
 	import AppHeader from './components/AppHeader'
-	import AppSection from './components/AppSection'
+	import AppSectionBanner from './components/AppSectionBanner'
+	import AppSectionNews from './components/AppSectionNews'
 	import AppFooter from './components/AppFooter'
 	export default {
 		name: 'App',
 		components: {
 			AppHeader,
-			AppSection,
+			AppSectionBanner,
+			AppSectionNews,
 			AppFooter
 		}
 	}
