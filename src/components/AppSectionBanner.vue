@@ -2,10 +2,10 @@
 	<article class="my-4">
 		<div class="container">
 			<div class="d-flex flex-wrap justify-content-center">
-				<div class="col-md-5 text-center principal-news" id="first">
+				<div class="col-md-5 my-3 my-md-0 text-center principal-news" id="first">
 					<h2 class="p-1">Veja os últimos resultados do campeonato</h2>
 				</div>
-				<div class="col-md-5 offset-md-2 text-center principal-news" id="second">
+				<div class="col-md-5 my-3 my-md-0 offset-md-2 text-center principal-news" id="second">
 					<h2 class="p-1">Venha conhecer o centro de treinamentos da Hcode</h2>
 				</div>
 			</div>
