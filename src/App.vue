@@ -29,4 +29,9 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
+
+	* {
+		outline: none;
+		text-decoration: none
+	}
 </style>
