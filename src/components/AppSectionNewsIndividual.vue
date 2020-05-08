@@ -1,9 +1,9 @@
 <template>
-	<div class="row mb-3">
-		<div class="col-3">
+	<div class="row my-3">
+		<div class="col-md-3 col-12">
 			<img :src="require('../assets/' + this.img)" :alt="imgInfo">
 		</div>
-		<div class="col-9">
+		<div class="col-md-9 col-12">
 			<h2 class="text-white">{{ newsTitle }}</h2>
 			<p>{{ newsContent | truncate(200) }}</p>
 			<span class="font-italic">{{ newsDate }}</span>

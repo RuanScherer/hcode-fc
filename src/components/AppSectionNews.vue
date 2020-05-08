@@ -1,5 +1,5 @@
 <template>
-	<section class="py-3 mt-4">
+	<section class="py-4 mt-4">
 		<div class="container">
 			<AppSectionNewsIndividual
 				img="news1.jpg"
