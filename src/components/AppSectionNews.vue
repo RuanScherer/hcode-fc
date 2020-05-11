@@ -6,8 +6,10 @@
 				:key="notice.id"
 				:img="'news' + notice.id + '.jpg'"
 				:imgInfo="'Notícia' + notice.id"
-				:newsTitle="notice.title"
 				:newsDate="notice.date">
+				<template #title>
+					<h2 class="text-white">{{ notice.title }}</h2>
+				</template>
 				<p>{{ notice.content | truncate(200) }}</p>
 			</AppSectionNewsIndividual>
 		</div>

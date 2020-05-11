@@ -4,7 +4,7 @@
 			<img :src="require('../assets/' + this.img)" :alt="imgInfo">
 		</div>
 		<div class="col-md-9 col-12">
-			<h2 class="text-white">{{ newsTitle }}</h2>
+			<slot name="title"></slot>
 			<slot>
 				Erro ao exibir o conteúdo da notícia
 			</slot>
@@ -22,10 +22,6 @@
 				required: true,
 			},
 			imgInfo: {
-				type: String,
-				required: true
-			},
-			newsTitle: {
 				type: String,
 				required: true
 			},
