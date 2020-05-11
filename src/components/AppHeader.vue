@@ -29,6 +29,19 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Classificações</a>
 					</li>
+					<li class="nav-item">
+						<select 
+							name="championship" 
+							id="select-championship" 
+							class="form-control"
+							@change="$emit('change-championship', $event.target.value)">
+							<option value="">Selecione um campeonato</option>
+							<option value="Campeonato Brasileiro" selected>Campeonato Brasileiro</option>
+							<option value="Campeonato Espanhol">Campeonato Espanhol</option>
+							<option value="Campeonato Inglês">Campeonato Inglês</option>
+							<option value="Campeonato Italiano">Campeonato Italiano</option>
+						</select>
+					</li>
 				</ul>
 			</div>
 		</div>

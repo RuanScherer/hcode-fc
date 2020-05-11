@@ -1,8 +1,11 @@
 <template>
 	<div id="app">
-		<AppHeader/>
+		<AppHeader @change-championship="changeChampionship"/>
 		<section>
 			<div>
+				<div class="container">
+					<h3 class="mt-5">Você está vendo notícias do {{ championship }}</h3>
+				</div>
 				<AppSectionBanner/>
 				<AppSectionNews/>
 			</div>
@@ -23,6 +26,16 @@
 			AppSectionBanner,
 			AppSectionNews,
 			AppFooter
+		},
+		data() {
+			return {
+				championship: 'Campeonato Brasileiro'
+			}
+		},
+		methods: {
+			changeChampionship(value) {
+				this.championship = value
+			}
 		}
 	}
 </script>
@@ -33,5 +46,9 @@
 	* {
 		outline: none;
 		text-decoration: none
+	}
+
+	input:focus, select:focus, textarea:focus {
+		box-shadow: none
 	}
 </style>
