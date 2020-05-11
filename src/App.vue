@@ -28,7 +28,6 @@
 <script>
 	import AppHeader from './components/AppHeader'
 	import AppSectionBanner from './components/AppSectionBanner'
-	import AppSectionNews from './components/AppSectionNews'
 	import AppInput from './components/AppInput'
 	import AppFooter from './components/AppFooter'
 	export default {
@@ -36,7 +35,7 @@
 		components: {
 			AppHeader,
 			AppSectionBanner,
-			AppSectionNews,
+			AppSectionNews: () => import('./components/AppSectionNews'),
 			AppInput,
 			AppFooter
 		},
