@@ -2,40 +2,13 @@
 	<section class="py-4 mt-4">
 		<div class="container">
 			<AppSectionNewsIndividual
-				img="news1.jpg"
-				imgInfo="Notícia 1"
-				newsTitle="Começam os treinos para a nova temporada"
-				newsContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-				newsDate="01/01/2020"
-			/>
-			<AppSectionNewsIndividual
-				img="news2.jpg"
-				imgInfo="Notícia 2"
-				newsTitle="Jogo de quarta-feira termina empatado"
-				newsContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-				newsDate="07/01/2020"
-			/>
-			<AppSectionNewsIndividual
-				img="news3.jpg"
-				imgInfo="Notícia 3"
-				newsTitle="A inauguração do novo estádio será na semana que vem"
-				newsContent="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-				newsDate="20/01/2020"
+				v-for="notice in news"
+				:key="notice.id"
+				:img="'news' + notice.id + '.jpg'"
+				:imgInfo="'Notícia' + notice.id"
+				:newsTitle="notice.title"
+				:newsContent="notice.content"
+				:newsDate="notice.date"
 			/>
 		</div>
 	</section>
@@ -47,6 +20,33 @@
 		name: 'AppSectionNews',
 		components: {
 			AppSectionNewsIndividual
+		},
+		data() {
+			return {
+				news: []
+			}
+		},
+		created() {
+			this.news = [
+				{
+					id: 1,
+					title: 'Começam os treinos para a nova temporada',
+					content: 'Este é um texto de exemplo utilizado para ser apresentado nos componentes de notícias visando popular informações para apresentação da página. Caso este texto ultrapasse uma determinada quantidade de caracteres ele será ocultado e adicionado de "..." no final.',
+					date: '01/01/2020'
+				},
+				{
+					id: 2,
+					title: 'Jogo de quarta-feira termina empatado',
+					content: 'Este é um texto de exemplo utilizado para ser apresentado nos componentes de notícias visando popular informações para apresentação da página. Caso este texto ultrapasse uma determinada quantidade de caracteres ele será ocultado e adicionado de "..." no final.',
+					date: '07/01/2020'
+				},
+				{
+					id: 3,
+					title: 'A inauguração do novo estádio será na semana que vem',
+					content: 'Este é um texto de exemplo utilizado para ser apresentado nos componentes de notícias visando popular informações para apresentação da página. Caso este texto ultrapasse uma determinada quantidade de caracteres ele será ocultado e adicionado de "..." no final.',
+					date: '20/01/2020'
+				}
+			]
 		}
 	}
 </script>
