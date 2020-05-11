@@ -21,10 +21,20 @@
 			<div class="collapse navbar-collapse" id="nav-menu">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
+						<a 
+							class="nav-link" 
+							href="#"
+							@click.prevent="$emit('change-component', 'AppSectionBanner')">
+							Home
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Times</a>
+						<a 
+							class="nav-link" 
+							href="#"
+							@click.prevent="$emit('change-component', 'AppSectionNews')">
+							Notícias
+						</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Classificações</a>

@@ -1,13 +1,14 @@
 <template>
 	<div id="app">
-		<AppHeader @change-championship="changeChampionship"/>
+		<AppHeader 
+			@change-championship="changeChampionship"
+			@change-component="changeComponent"/>
 		<section>
 			<div>
 				<div class="container">
 					<h3 class="mt-5">Você está vendo notícias do {{ championship }}</h3>
 				</div>
-				<AppSectionBanner/>
-				<AppSectionNews/>
+				<component :is="currentComponent"></component>
 			</div>
 		</section>
 		<div class="container">
@@ -42,12 +43,16 @@
 		data() {
 			return {
 				championship: 'Campeonato Brasileiro',
-				club: 'Hcode Treinamentos'
+				club: 'Hcode Treinamentos',
+				currentComponent: 'AppSectionBanner'
 			}
 		},
 		methods: {
 			changeChampionship(value) {
 				this.championship = value
+			},
+			changeComponent(value) {
+				this.currentComponent = value
 			}
 		}
 	}
