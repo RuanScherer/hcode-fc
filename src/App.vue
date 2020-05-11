@@ -5,19 +5,21 @@
 			<div>
 				<div class="container">
 					<h3 class="mt-5">Você está vendo notícias do {{ championship }}</h3>
-					<div class="d-flex flex-wrap my-club mt-5">
-						<h4 class="col-md-6">
-							Seu clube é: {{ club }}
-						</h4>
-						<div class="col-md-6">
-							<AppInput v-model="club" placeholder="Seu clube"/>
-						</div>
-					</div>
 				</div>
 				<AppSectionBanner/>
 				<AppSectionNews/>
 			</div>
 		</section>
+		<div class="container">
+			<div class="d-flex flex-wrap my-club my-5">
+				<h4 class="col-md-6">
+					Seu clube é: {{ club }}
+				</h4>
+				<div class="col-md-6">
+					<AppInput v-model="club" placeholder="Seu clube"/>
+				</div>
+			</div>
+		</div>
 		<AppFooter/>
 	</div>
 </template>
