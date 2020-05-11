@@ -5,7 +5,9 @@
 		</div>
 		<div class="col-md-9 col-12">
 			<h2 class="text-white">{{ newsTitle }}</h2>
-			<p>{{ newsContent | truncate(200) }}</p>
+			<slot>
+				Erro ao exibir o conteúdo da notícia
+			</slot>
 			<span class="font-italic">{{ newsDate }}</span>
 		</div>
 	</div>
@@ -24,10 +26,6 @@
 				required: true
 			},
 			newsTitle: {
-				type: String,
-				required: true
-			},
-			newsContent: {
 				type: String,
 				required: true
 			},

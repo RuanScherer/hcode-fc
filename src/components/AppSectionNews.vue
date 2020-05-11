@@ -7,9 +7,9 @@
 				:img="'news' + notice.id + '.jpg'"
 				:imgInfo="'Notícia' + notice.id"
 				:newsTitle="notice.title"
-				:newsContent="notice.content"
-				:newsDate="notice.date"
-			/>
+				:newsDate="notice.date">
+				<p>{{ notice.content | truncate(200) }}</p>
+			</AppSectionNewsIndividual>
 		</div>
 	</section>
 </template>
