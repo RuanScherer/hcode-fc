@@ -34,19 +34,19 @@
 					id: 1,
 					title: 'Começam os treinos para a nova temporada',
 					content: 'Este é um texto de exemplo utilizado para ser apresentado nos componentes de notícias visando popular informações para apresentação da página. Caso este texto ultrapasse uma determinada quantidade de caracteres ele será ocultado e adicionado de "..." no final.',
-					date: '01/01/2020'
+					date: '2020-01-01'
 				},
 				{
 					id: 2,
 					title: 'Jogo de quarta-feira termina empatado',
 					content: 'Este é um texto de exemplo utilizado para ser apresentado nos componentes de notícias visando popular informações para apresentação da página. Caso este texto ultrapasse uma determinada quantidade de caracteres ele será ocultado e adicionado de "..." no final.',
-					date: '07/01/2020'
+					date: '2020-01-07'
 				},
 				{
 					id: 3,
 					title: 'A inauguração do novo estádio será na semana que vem',
 					content: 'Este é um texto de exemplo utilizado para ser apresentado nos componentes de notícias visando popular informações para apresentação da página. Caso este texto ultrapasse uma determinada quantidade de caracteres ele será ocultado e adicionado de "..." no final.',
-					date: '20/01/2020'
+					date: '2020-01-20'
 				}
 			]
 		}
