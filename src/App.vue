@@ -29,6 +29,7 @@
 	import AppHeader from './components/AppHeader'
 	import AppSectionBanner from './components/AppSectionBanner'
 	import AppInput from './components/AppInput'
+	import { mapState } from 'vuex'
 	import AppFooter from './components/AppFooter'
 	export default {
 		name: 'App',
@@ -41,8 +42,6 @@
 		},
 		data() {
 			return {
-				championship: 'Campeonato Brasileiro',
-				club: 'Hcode Treinamentos',
 				currentComponent: 'AppSectionBanner'
 			}
 		},
@@ -53,6 +52,9 @@
 			changeComponent(value) {
 				this.currentComponent = value
 			}
+		},
+		computed: {
+			...mapState(['championship', 'club'])
 		}
 	}
 </script>
