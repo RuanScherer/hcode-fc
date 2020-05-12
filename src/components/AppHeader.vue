@@ -21,20 +21,10 @@
 			<div class="collapse navbar-collapse" id="nav-menu">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a 
-							class="nav-link" 
-							href="#"
-							@click.prevent="$emit('change-component', 'AppSectionBanner')">
-							Home
-						</a>
+						<router-link class="nav-link rounded" to="/">Início</router-link>
 					</li>
 					<li class="nav-item">
-						<a 
-							class="nav-link" 
-							href="#"
-							@click.prevent="$emit('change-component', 'AppSectionNews')">
-							Notícias
-						</a>
+						<router-link class="nav-link rounded" to="/news">Notícias</router-link>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Classificações</a>
@@ -76,5 +66,9 @@
 	.links a:focus {
 		outline: none !important;
 		box-shadow: none
+	}
+	.link-active {
+		background-color: var(--light);
+		color: var(--dark) !important
 	}
 </style>
