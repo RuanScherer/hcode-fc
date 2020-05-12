@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import AppSectionBanner from './../components/AppSectionBanner'
 import AppSectionNews from './../components/AppSectionNews'
 import AppClub from './../components/AppClub'
+import AppNotFound from './../components/AppNotFound'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,10 @@ const routes = [
 	{
 		path: '/admin',
 		redirect: '/'
+	},
+	{
+		path: '*',
+		component: AppNotFound
 	}
 ]
 
