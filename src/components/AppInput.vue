@@ -3,16 +3,24 @@
 		type="text"
 		class="form-control"
 		:placeholder="placeholder"
-		:value="value"
-		@keyup="$emit('input', $event.target.value)">
+		:value="club"
+		@keyup="changeClub($event.target.value)">
 </template>
 
 <script>
+	import { mapGetters, mapActions } from 'vuex'
 	export default {
 		name: 'AppInput',
 		props: {
-			placeholder: String, 
-			value: String
+			placeholder: String
+		},
+		methods: {
+			...mapActions(["changeClub"])
+		},
+		computed: {
+			...mapGetters({
+				club: "getClub"
+			})
 		}
 	}
 </script>
