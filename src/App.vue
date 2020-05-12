@@ -68,6 +68,7 @@
 	}
 
 	input:focus, select:focus, textarea:focus {
-		box-shadow: none
+		box-shadow: none !important;
+		border-color: var(--dark) !important;
 	}
 </style>
