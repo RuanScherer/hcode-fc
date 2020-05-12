@@ -13,6 +13,7 @@ const routes = [
 	},
 	{
 		path: '/news',
+		alias: '/notices',
 		component: AppSectionNews
 	},
 	{
