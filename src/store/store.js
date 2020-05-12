@@ -11,5 +11,8 @@ export default new Vuex.Store({
 	getters: {
 		getChampionship: (state) => state.championship,
 		getClub: (state) => state.club
+	},
+	mutations: {
+		setChampionship: (state, newValue) => state.championship = newValue
 	}
 })

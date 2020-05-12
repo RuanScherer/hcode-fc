@@ -1,7 +1,6 @@
 <template>
 	<div id="app">
 		<AppHeader 
-			@change-championship="changeChampionship"
 			@change-component="changeComponent"/>
 		<section>
 			<div>
@@ -46,9 +45,6 @@
 			}
 		},
 		methods: {
-			changeChampionship(value) {
-				this.championship = value
-			},
 			changeComponent(value) {
 				this.currentComponent = value
 			}

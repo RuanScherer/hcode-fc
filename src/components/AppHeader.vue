@@ -44,7 +44,7 @@
 							name="championship" 
 							id="select-championship" 
 							class="form-control"
-							@change="$emit('change-championship', $event.target.value)">
+							@change="changeChampionship($event.target.value)">
 							<option value="">Selecione um campeonato</option>
 							<option value="Campeonato Brasileiro" selected>Campeonato Brasileiro</option>
 							<option value="Campeonato Espanhol">Campeonato Espanhol</option>
@@ -59,8 +59,14 @@
 </template>
 
 <script>
+	import { mapMutations } from 'vuex'
 	export default {
-		name: 'name'
+		name: 'name',
+		methods: {
+			...mapMutations({
+				changeChampionship: "setChampionship"
+			})
+		}
 	}
 </script>
 
