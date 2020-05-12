@@ -9,7 +9,7 @@ export default new Vuex.Store({
 		club: "Hcode Treinamentos",
 	},
 	getters: {
-		getChapionship: (state) => state.championship,
-		getClub: (state) => state.clubname
+		getChampionship: (state) => state.championship,
+		getClub: (state) => state.club
 	}
 })

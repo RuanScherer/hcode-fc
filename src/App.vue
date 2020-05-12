@@ -54,7 +54,10 @@
 			}
 		},
 		computed: {
-			...mapGetters(['championship', 'club'])
+			...mapGetters({
+				championship: 'getChampionship',
+				club: 'getClub'
+			})
 		}
 	}
 </script>
