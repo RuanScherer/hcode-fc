@@ -1,6 +1,9 @@
 <template>
 	<section class="py-4 mt-4">
 		<div class="container">
+			<h3 class="mb-3">Você está vendo notícias do {{ championship }}</h3>
+		</div>
+		<div class="container">
 			<AppSectionNewsIndividual
 				v-for="notice in news"
 				:key="notice.id"
@@ -18,6 +21,7 @@
 
 <script>
 	import AppSectionNewsIndividual from './AppSectionNewsIndividual'
+	import { mapGetters } from 'vuex'
 	export default {
 		name: 'AppSectionNews',
 		components: {
@@ -27,6 +31,9 @@
 			return {
 				news: []
 			}
+		},
+		computed: {
+			...mapGetters({ championship: 'getChampionship' })
 		},
 		created() {
 			this.news = [

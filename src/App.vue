@@ -4,35 +4,23 @@
 		<section>
 			<div>
 				<div class="container">
-					<h3 class="mt-5">Você está vendo notícias do {{ championship }}</h3>
+					<h3 class="mt-5">Seu clube é: {{ club }}</h3>
 				</div>
 				<router-view></router-view>
 			</div>
 		</section>
-		<div class="container">
-			<div class="d-flex flex-wrap my-club my-5">
-				<h4 class="col-md-6">
-					Seu clube é: {{ club }}
-				</h4>
-				<div class="col-md-6">
-					<AppInput placeholder="Seu clube"/>
-				</div>
-			</div>
-		</div>
-		<AppFooter/>
+		<AppFooter class="mt-5"/>
 	</div>
 </template>
 
 <script>
 	import AppHeader from './components/AppHeader'
-	import AppInput from './components/AppInput'
 	import { mapGetters } from 'vuex'
 	import AppFooter from './components/AppFooter'
 	export default {
 		name: 'App',
 		components: {
 			AppHeader,
-			AppInput,
 			AppFooter
 		},
 		computed: {

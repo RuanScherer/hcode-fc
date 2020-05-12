@@ -20,16 +20,16 @@
 
 			<div class="collapse navbar-collapse" id="nav-menu">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+					<li class="nav-item mx-2">
 						<router-link class="nav-link rounded" to="/">Início</router-link>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item mx-2">
 						<router-link class="nav-link rounded" to="/news">Notícias</router-link>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Classificações</a>
+					<li class="nav-item mx-2">
+						<router-link class="nav-link rounded" to="/club">Clube</router-link>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item mx-2">
 						<select 
 							name="championship" 
 							id="select-championship" 
