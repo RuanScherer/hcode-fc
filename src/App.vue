@@ -29,7 +29,7 @@
 	import AppHeader from './components/AppHeader'
 	import AppSectionBanner from './components/AppSectionBanner'
 	import AppInput from './components/AppInput'
-	import { mapState } from 'vuex'
+	import { mapGetters } from 'vuex'
 	import AppFooter from './components/AppFooter'
 	export default {
 		name: 'App',
@@ -54,7 +54,7 @@
 			}
 		},
 		computed: {
-			...mapState(['championship', 'club'])
+			...mapGetters(['championship', 'club'])
 		}
 	}
 </script>
