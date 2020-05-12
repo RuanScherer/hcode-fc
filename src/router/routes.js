@@ -18,6 +18,10 @@ const routes = [
 	{
 		path: '/club',
 		component: AppClub
+	},
+	{
+		path: '/admin',
+		redirect: '/'
 	}
 ]
 
