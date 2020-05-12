@@ -59,13 +59,11 @@
 </template>
 
 <script>
-	import { mapMutations } from 'vuex'
+	import { mapActions } from 'vuex'
 	export default {
 		name: 'name',
 		methods: {
-			...mapMutations({
-				changeChampionship: "setChampionship"
-			})
+			...mapActions(["changeChampionship"])
 		}
 	}
 </script>
